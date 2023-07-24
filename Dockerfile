@@ -1,6 +1,6 @@
-FROM tinsirius/ece4078_prac:focal-43e3c14
+FROM tinsirius/ece4078_prac:focal-a6e39eca
 
-RUN python3 -m pip install --no-cache-dir notebook jupyterlab==4.0.3 ipympl ipywidgets==8.0.7
+RUN python3 -m pip install --no-cache-dir notebook==6.4.8 jupyterlab==4.0.3 ipympl==0.9.3 ipywidgets==8.0.7
 
 ARG NB_USER=ece4078
 ARG NB_UID=1000

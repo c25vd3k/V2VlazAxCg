@@ -7,7 +7,7 @@ test = {
 				{
 					"code": r"""
 					>>> r = np.round(get_point_in_robot_frame(point_c=np.array([0, 1, 3]), gamma=0, disp_c=2), 2).flatten()
-					>>> answer = np.array([0., 1., 5.]).flatten()
+					>>> answer = np.array([2., 1., 3.]).flatten()
 					>>> np.all(np.isclose(r, answer))
 					True
 					""",
@@ -17,7 +17,7 @@ test = {
 				{
 					"code": r"""
 					>>> r = np.round(get_point_in_robot_frame(point_c=np.array([2, 0, 2]), gamma=np.pi/2, disp_c=2), 2).flatten()
-					>>> answer = np.array([2., 0., 0.]).flatten()
+					>>> answer = np.array([2., 0., -4.]).flatten()
 					>>> np.all(np.isclose(r, answer))
 					True
 					""",
@@ -27,7 +27,7 @@ test = {
 				{
 					"code": r"""
 					>>> r = np.round(get_point_in_robot_frame(point_c=np.array([1, 1, 1]), gamma=-np.pi/3, disp_c=5), 2).flatten()
-					>>> answer = np.array([-0.37,  1.,    6.37]).flatten()
+					>>> answer = np.array([2.13, 1., 5.7]).flatten()
 					>>> np.all(np.isclose(r, answer))
 					True
 					""",
